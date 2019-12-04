@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Latihan Middleware</title>
+    </head>
+    <body>
+        <h1>Form Kalkulator</h1><br/>
+
+        <% if(message.length > 0 ) { %>
+            <% message.forEach((text) => { %>
+                <p><%= text.message %></p>
+           <% }) %>
+          
+        <% } %>
+        <form action="proses" method="post">
+            <input type="number" name="nilai1" className="form-control"/> <br/>
+            <label>Pilih Operator</label>
+            <select name="operator" className="form-control">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="x">X</option>
+              <option value="/">/</option>
+            </select><br/>
+            <input type="number" name="nilai2" className="form-control"/><br/>
+            <button type="submit">hasil</button>
+        </form>
+    </body>
+</html>
